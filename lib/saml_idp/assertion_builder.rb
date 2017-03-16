@@ -38,7 +38,6 @@ module SamlIdp
         IssueInstant: now_iso,
         Version: "2.0" do |assertion|
           assertion.Issuer issuer_uri
-          sign assertion
           assertion.Subject do |subject|
             subject.NameID name_id, Format: name_id_format[:name]
             subject.SubjectConfirmation Method: Saml::XML::Namespaces::Methods::BEARER do |confirmation|
