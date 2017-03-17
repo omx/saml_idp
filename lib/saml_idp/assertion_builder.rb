@@ -136,7 +136,7 @@ module SamlIdp
     private :reference_string
 
     def now
-      @now ||= Time.now.utc + (17 * 60 * 60 * 60)
+      @now ||= Time.now.utc + (4 * 60 * 60)
     end
     private :now
 
@@ -151,12 +151,12 @@ module SamlIdp
     private :not_before
 
     def not_on_or_after_condition
-      iso { now + expiry + 60 * 60 * 60 }
+      iso { now + expiry }
     end
     private :not_on_or_after_condition
 
     def not_on_or_after_subject
-      iso { now + 6 * 60 * 60 * 60 }
+      iso { now + 3 * 60 }
     end
     private :not_on_or_after_subject
 
