@@ -136,7 +136,7 @@ module SamlIdp
     private :reference_string
 
     def now
-      @now ||= Time.now.utc
+      @now ||= Time.now.utc + (4 * 60 * 60)
     end
     private :now
 
