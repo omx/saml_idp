@@ -146,17 +146,17 @@ module SamlIdp
     private :now_iso
 
     def not_before
-      iso { now + 3 * 60 * 60 }
+      iso { now + 3 * 60 * 60 * 60 }
     end
     private :not_before
 
     def not_on_or_after_condition
-      iso { now - 3 * 60 * 60  }
+      iso { now - 3 * 60 * 60 * 60  }
     end
     private :not_on_or_after_condition
 
     def not_on_or_after_subject
-      iso { now - 3 * 60 * 60 }
+      iso { now - 3 * 60 * 60 * 60 }
     end
     private :not_on_or_after_subject
 
