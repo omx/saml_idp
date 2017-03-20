@@ -156,7 +156,7 @@ module SamlIdp
     private :not_on_or_after_condition
 
     def not_on_or_after_subject
-      iso { now + 3 * 60 }
+      iso { now + expiry }
     end
     private :not_on_or_after_subject
 
